@@ -2,9 +2,9 @@
   "name": "node-koa-template",
   "version": "1.0.0",
   "description": "搭建一个可复用、以koa为主的服务端开发环境",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "dev": "cross-env NODE_DEV=development PORT=8899 nodemon ./main",
+    "dev": "cross-env NODE_DEV=development PORT=8899 nodemon ./src/main",
     "prod": "pm2 start ./pm2.json",
     "prettier": "prettier --ignore-path .gitignore --write ."
   },

@@ -2,11 +2,16 @@
   "apps": [
     {
       "name": "app",
-      "script": "./main.js",
+      "script": "./src/main.js",
       "instances": -1,
       "exec_mode": "cluster",
       "watch": false,
-      "ignore_watch": ["node_modules", "logs", "data", "scripts"],
+      "ignore_watch": [
+        "node_modules",
+        "logs",
+        "data",
+        "scripts"
+      ],
       "env": {
         "NODE_ENV": "production"
       },

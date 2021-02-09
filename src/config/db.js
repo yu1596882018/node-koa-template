@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const elasticsearch = require('elasticsearch')
 
 const config = require('./index')
-const { logUtil } = require('./../utils')
+const { logUtil } = require('../utils')
 
 const isProd = process.env.NODE_DEV === 'production'
 

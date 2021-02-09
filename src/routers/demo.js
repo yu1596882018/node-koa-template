@@ -1,7 +1,7 @@
 const Router = require('koa-router')
 const multer = require('koa-multer')
 const demoRouter = new Router()
-const demoCont = require('./../controllers/demo')
+const demoCont = require('../controllers/demo')
 const routerCommonExt = require('./routerCommonExt')
 const upload = multer({ dest: 'static/' })
 

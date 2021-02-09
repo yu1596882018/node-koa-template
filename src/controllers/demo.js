@@ -1,4 +1,4 @@
-const demoModel = require('./../models/demo')
+const demoModel = require('../models/demo')
 const commonExt = require('./commonExt')
 
 module.exports = {
