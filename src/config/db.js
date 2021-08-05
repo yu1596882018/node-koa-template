@@ -20,9 +20,9 @@ const mysqlOptions = {
 }
 
 const devMysqlConfig = [
-  'koa_demo', // 数据库名
+  'test', // 数据库名
   'root', // 用户名
-  '12345', // 密码
+  'xingyun2021.', // 密码
   mysqlOptions,
 ]
 
@@ -39,8 +39,8 @@ if (config.connectRedis) {
 let esClient = null
 if (config.connectES) {
   esClient = new elasticsearch.Client({
-    host: 'http://172.18.138.7:9200',
-    apiVersion: '6.8',
+    host: 'http://39.108.161.237:9200',
+    apiVersion: '7.2',
   })
 }
 
