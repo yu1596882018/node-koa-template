@@ -154,6 +154,7 @@ var formatReqLog = function (ctx, resTime, logObj = {}) {
   //服务器响应时间
   logText += 'response time: ' + resTime + '\n'
   logObj.requestTime = resTime
+  logObj.timestamp = new Date()
 
   return {
     logText,
