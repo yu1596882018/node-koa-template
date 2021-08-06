@@ -4,7 +4,7 @@
   "description": "搭建一个可复用、以koa为主的服务端开发环境",
   "main": "src/main.js",
   "scripts": {
-    "dev": "cross-env NODE_DEV=development PORT=8899 nodemon ./src/main",
+    "dev": "cross-env NODE_ENV=development PORT=8899 nodemon ./src/main",
     "prod": "pm2 start ./pm2.json",
     "prettier": "prettier --ignore-path .gitignore --write ."
   },

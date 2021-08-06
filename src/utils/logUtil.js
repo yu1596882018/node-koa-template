@@ -1,7 +1,7 @@
 const log4js = require('log4js')
 const uuidv1 = require('uuid/v1')
 const logConfig = require('../config/logConfig')
-const isProdu = process.env.NODE_DEV === 'production'
+const isProdu = process.env.NODE_ENV === 'production'
 
 log4js.configure(logConfig)
 
@@ -16,7 +16,7 @@ logUtil.logError = function (ctx, error, resTime, esClient) {
   if (ctx && error) {
     const errLog = formatError(ctx, error, resTime)
 
-    esClient?.create({
+    esClient && esClient.create({
       index: 'server_err_logs',
       type: '_doc',
       id: uuidv1(),
@@ -33,7 +33,7 @@ logUtil.logResponse = function (ctx, resTime, esClient) {
     const resLog = formatRes(ctx, resTime)
     resLogger.info(resLog.logText)
 
-    esClient?.create({
+    esClient && esClient.create({
       index: 'server_res_logs',
       type: '_doc',
       id: uuidv1(),
